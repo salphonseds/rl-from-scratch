@@ -1,0 +1,30 @@
+notebook: nb01_bandits
+created_utc: '2026-08-16T15:54:10+00:00'
+content_hash: 8ac9931b22e03ac93d9837bac8706e13
+predictions:
+- key: leader_1000
+  claim: Method with the highest average reward at step 1000
+  expected: ucb
+  confidence: medium
+  reasoning: UCB's exploration bonus decays as log(t)/N(a), so it stops wasting pulls
+    on arms it already knows are bad. eps-greedy at 0.1 keeps paying a fixed 10% exploration
+    tax forever.
+- key: leader_100
+  claim: Method with the highest average reward at step 100
+  expected: epsilon_greedy
+  confidence: low
+  reasoning: At step 100 with k=10, UCB has barely finished its initial sweep and
+    optimistic init is still working through its disappointment phase. eps-greedy
+    commits early.
+- key: ranking_stable
+  claim: The step-100 leader is the same method as the step-1000 leader
+  expected: false
+  confidence: medium
+  reasoning: Early performance is dominated by exploration cost, late performance
+    by exploration quality. Different questions.
+- key: optimistic_dip
+  claim: Optimistic init's average reward at step 20 is below eps-greedy's
+  expected: true
+  confidence: high
+  reasoning: Q0=5 forces it to try every arm before settling, so it is deliberately
+    spending the first ~k*several steps learning rather than earning.
