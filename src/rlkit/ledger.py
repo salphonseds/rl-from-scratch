@@ -137,4 +137,6 @@ def _jsonable(v: Any) -> Any:
         return v.tolist()
     if isinstance(v, (tuple, set)):
         return list(v)
+    if isinstance(v, (str, int, float, bool, type(None))):
+        return v
     return repr(v)          # last resort: lossy, but always serializable

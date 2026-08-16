@@ -75,9 +75,9 @@
       "tier": "artifact",
       "passed": true,
       "detail": {
-        "passed": true,
-        "testbed": 6586339410735859701,
-        "agent": 7266255364236609599
+        "passed": "True",
+        "testbed": "6586339410735859701",
+        "agent": "7266255364236609599"
       }
     },
     {
@@ -91,8 +91,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "q_star_run7_max": 2.1935
+        "passed": "True",
+        "q_star_run7_max": "2.1935"
       }
     },
     {
@@ -105,8 +105,8 @@
           -0.0185,
           0.0358
         ],
-        "q_star_std": 1.0012,
-        "reward_mean_error": -0.0013
+        "q_star_std": "1.0012",
+        "reward_mean_error": "-0.0013"
       }
     },
     {
@@ -114,8 +114,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "Q_after_2_4_8": 4.666667
+        "passed": "True",
+        "Q_after_2_4_8": "4.666667"
       }
     },
     {
@@ -123,8 +123,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "Q": 2.642
+        "passed": "True",
+        "Q": "2.642"
       }
     },
     {
@@ -132,13 +132,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "tie_counts": [
-          954,
-          1019,
-          1024,
-          1003
-        ]
+        "passed": "True",
+        "tie_counts": "[954, 1019, 1024, 1003]"
       }
     },
     {
@@ -146,8 +141,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "Q_after_first_pull": 0.3
+        "passed": "True",
+        "Q_after_first_pull": "0.3"
       }
     },
     {
@@ -155,19 +150,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "first_k_actions": [
-          7,
-          5,
-          4,
-          2,
-          9,
-          1,
-          3,
-          8,
-          0,
-          6
-        ]
+        "passed": "True",
+        "first_k_actions": "[7, 5, 4, 2, 9, 1, 3, 8, 0, 6]"
       }
     },
     {
@@ -175,12 +159,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "scores": [
-          2.35723,
-          6.29193,
-          2.41941
-        ]
+        "passed": "True",
+        "scores": "[2.35723, 6.29193, 2.41941]"
       }
     },
     {
@@ -188,15 +168,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "sweep": [
-          0,
-          5,
-          2,
-          3,
-          1,
-          4
-        ]
+        "passed": "True",
+        "sweep": "[0, 5, 2, 3, 1, 4]"
       }
     },
     {
@@ -204,8 +177,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "bonus_growth_ratio": 1.95986
+        "passed": "True",
+        "bonus_growth_ratio": "1.95986"
       }
     },
     {
@@ -213,12 +186,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "scores": [
-          2.35723,
-          6.29193,
-          2.41941
-        ]
+        "passed": "True",
+        "scores": "[2.35723, 6.29193, 2.41941]"
       }
     },
     {
@@ -226,15 +195,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "sweep": [
-          0,
-          5,
-          2,
-          3,
-          1,
-          4
-        ]
+        "passed": "True",
+        "sweep": "[0, 5, 2, 3, 1, 4]"
       }
     },
     {
@@ -242,8 +204,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "bonus_growth_ratio": 1.95986
+        "passed": "True",
+        "bonus_growth_ratio": "1.95986"
       }
     },
     {
@@ -251,11 +213,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "softmax_0_ln3": [
-          0.25,
-          0.75
-        ]
+        "passed": "True",
+        "softmax_0_ln3": "[0.25, 0.75]"
       }
     },
     {
@@ -263,12 +222,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "H_after": [
-          -0.5,
-          1.0,
-          -0.5
-        ]
+        "passed": "True",
+        "H_after": "[-0.5, 1.0, -0.5]"
       }
     },
     {
@@ -276,11 +231,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "softmax_0_ln3": [
-          0.25,
-          0.75
-        ]
+        "passed": "True",
+        "softmax_0_ln3": "[0.25, 0.75]"
       }
     },
     {
@@ -288,12 +240,8 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "H_after": [
-          -0.5,
-          1.0,
-          -0.5
-        ]
+        "passed": "True",
+        "H_after": "[-0.5, 1.0, -0.5]"
       }
     },
     {
@@ -301,9 +249,9 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "rel_err": 1.740066324274034e-11,
-        "cosine": 1.0
+        "passed": "True",
+        "rel_err": "1.740066324274034e-11",
+        "cosine": "1.0"
       }
     },
     {
@@ -312,8 +260,8 @@
       "passed": true,
       "detail": {
         "passed": true,
-        "components_covered": "4/4",
-        "max_abs_error": 0.00229
+        "components_covered": "'4/4'",
+        "max_abs_error": "0.00229"
       }
     },
     {
@@ -321,7 +269,7 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true
+        "passed": "True"
       }
     },
     {
@@ -329,7 +277,7 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true
+        "passed": "True"
       }
     },
     {
@@ -337,9 +285,9 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true,
-        "mean_regret": 0.2665,
-        "optimal_rate": 0.53
+        "passed": "True",
+        "mean_regret": "0.2665",
+        "optimal_rate": "0.53"
       }
     },
     {
@@ -347,10 +295,10 @@
       "tier": "deterministic",
       "passed": true,
       "detail": {
-        "passed": true
+        "passed": "True"
       }
     }
   ],
-  "finished_utc": "2026-08-16T16:38:50+00:00",
-  "wall_clock_s": 2818.9
+  "finished_utc": "2026-08-16T16:42:35+00:00",
+  "wall_clock_s": 3044.1
 }
