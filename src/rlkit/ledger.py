@@ -119,13 +119,22 @@ class RunLedger:
 
 
 def _jsonable(v: Any) -> Any:
+    """Coerce to a JSON-serializable type.
+
+    Used as json's `default=` callback, so the fallback must NEVER return
+    its input unchanged -- json would re-dispatch on the same object and
+    report a spurious "circular reference". np.bool_ in particular is not
+    a Python bool and reaches this function from numpy comparisons.
+    """
     import numpy as np
-    if isinstance(v, (np.integer,)):
+    if isinstance(v, np.bool_):
+        return bool(v)
+    if isinstance(v, np.integer):
         return int(v)
-    if isinstance(v, (np.floating,)):
+    if isinstance(v, np.floating):
         return float(v)
     if isinstance(v, np.ndarray):
         return v.tolist()
-    if isinstance(v, tuple):
+    if isinstance(v, (tuple, set)):
         return list(v)
-    return v
+    return repr(v)          # last resort: lossy, but always serializable

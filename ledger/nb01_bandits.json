@@ -1,0 +1,356 @@
+{
+  "notebook": "nb01_bandits",
+  "started_utc": "2026-08-16T15:51:51+00:00",
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+    "packages": {
+      "numpy": "2.0.2",
+      "scipy": "1.16.3",
+      "matplotlib": "3.10.0",
+      "yaml": "6.0.3",
+      "torch": "2.11.0+cpu",
+      "gymnasium": "1.3.0"
+    }
+  },
+  "git": {
+    "commit": "c1d03b78325fdba37d9bba2dc5e32d95dd2130ca",
+    "branch": "main",
+    "dirty": false
+  },
+  "seed_bank": {
+    "master_seed": 42,
+    "label": "nb01-bandits",
+    "numpy_version": "2.0.2"
+  },
+  "results": {
+    "leader_1000": "ucb",
+    "leader_100": "optimistic",
+    "ranking_stable": false,
+    "optimistic_dip": false
+  },
+  "timings": {
+    "main_run": 24.346,
+    "parameter_study": 83.309
+  },
+  "notes": [],
+  "predictions": {
+    "notebook": "nb01_bandits",
+    "n_scored": 4,
+    "n_hits": 2,
+    "rows": [
+      {
+        "key": "leader_1000",
+        "verdict": "HIT",
+        "expected": "ucb",
+        "observed": "ucb",
+        "confidence": "medium"
+      },
+      {
+        "key": "leader_100",
+        "verdict": "MISS",
+        "expected": "epsilon_greedy",
+        "observed": "optimistic",
+        "confidence": "low"
+      },
+      {
+        "key": "ranking_stable",
+        "verdict": "HIT",
+        "expected": false,
+        "observed": false,
+        "confidence": "medium"
+      },
+      {
+        "key": "optimistic_dip",
+        "verdict": "MISS",
+        "expected": true,
+        "observed": false,
+        "confidence": "high"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "rlkit seed fingerprint matches the v0.1 build",
+      "tier": "artifact",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "testbed": 6586339410735859701,
+        "agent": 7266255364236609599
+      }
+    },
+    {
+      "name": "testbed and agent streams are independent",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "run index determines the problem, identically for all algorithms",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "q_star_run7_max": 2.1935
+      }
+    },
+    {
+      "name": "q* ~ N(0,1) and rewards centre on q*(a)",
+      "tier": "calibration",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "q_star_mean_ci": [
+          -0.0185,
+          0.0358
+        ],
+        "q_star_std": 1.0012,
+        "reward_mean_error": -0.0013
+      }
+    },
+    {
+      "name": "incremental sample average matches hand computation on [2, 4, 8]",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "Q_after_2_4_8": 4.666667
+      }
+    },
+    {
+      "name": "constant alpha gives the exponentially weighted form",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "Q": 2.642
+      }
+    },
+    {
+      "name": "ties broken uniformly, not toward the lowest index",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "tie_counts": [
+          954,
+          1019,
+          1024,
+          1003
+        ]
+      }
+    },
+    {
+      "name": "first visit replaces Q0 with the observed reward",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "Q_after_first_pull": 0.3
+      }
+    },
+    {
+      "name": "optimism forces a full sweep of k arms in the first k steps",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "first_k_actions": [
+          7,
+          5,
+          4,
+          2,
+          9,
+          1,
+          3,
+          8,
+          0,
+          6
+        ]
+      }
+    },
+    {
+      "name": "UCB scores match hand-computed values",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "scores": [
+          2.35723,
+          6.29193,
+          2.41941
+        ]
+      }
+    },
+    {
+      "name": "untried arms receive an infinite bonus and are swept first",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "sweep": [
+          0,
+          5,
+          2,
+          3,
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "name": "bonus shrinks with N(a) and grows with t",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "bonus_growth_ratio": 1.95986
+      }
+    },
+    {
+      "name": "UCB scores match hand-computed values",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "scores": [
+          2.35723,
+          6.29193,
+          2.41941
+        ]
+      }
+    },
+    {
+      "name": "untried arms receive an infinite bonus and are swept first",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "sweep": [
+          0,
+          5,
+          2,
+          3,
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "name": "bonus shrinks with N(a) and grows with t",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "bonus_growth_ratio": 1.95986
+      }
+    },
+    {
+      "name": "softmax sums to 1 and is invariant to adding a constant",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "softmax_0_ln3": [
+          0.25,
+          0.75
+        ]
+      }
+    },
+    {
+      "name": "preference update matches the analytic gradient by hand",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "H_after": [
+          -0.5,
+          1.0,
+          -0.5
+        ]
+      }
+    },
+    {
+      "name": "softmax sums to 1 and is invariant to adding a constant",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "softmax_0_ln3": [
+          0.25,
+          0.75
+        ]
+      }
+    },
+    {
+      "name": "preference update matches the analytic gradient by hand",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "H_after": [
+          -0.5,
+          1.0,
+          -0.5
+        ]
+      }
+    },
+    {
+      "name": "update direction matches d E[R] / dH by finite differences",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "rel_err": 1.740066324274034e-11,
+        "cosine": 1.0
+      }
+    },
+    {
+      "name": "sampled update is unbiased for the true gradient",
+      "tier": "calibration",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "components_covered": "4/4",
+        "max_abs_error": 0.00229
+      }
+    },
+    {
+      "name": "all agents face identical testbeds for a given run index",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true
+      }
+    },
+    {
+      "name": "runs reproduce exactly; different agents diverge",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true
+      }
+    },
+    {
+      "name": "regret is defined on q*, not observed reward",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "mean_regret": 0.2665,
+        "optimal_rate": 0.53
+      }
+    },
+    {
+      "name": "evaluate() gives each run a fresh agent",
+      "tier": "deterministic",
+      "passed": true,
+      "detail": {
+        "passed": true
+      }
+    }
+  ],
+  "finished_utc": "2026-08-16T16:38:50+00:00",
+  "wall_clock_s": 2818.9
+}
